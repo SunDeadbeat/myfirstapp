@@ -14,9 +14,9 @@ model Books {
   YearPublished Int
 }
 
-model EFMigrationsHistory {
-  MigrationId    String @id(map: "PK___EFMigrationsHistory") @db.NVarChar(150)
-  ProductVersion String @db.NVarChar(32)
-
-  @@map("__EFMigrationsHistory")
+model Tasks {
+  Id Int @id(map: "PK_Tasks") @default(autoincrement())
+  Title String @db.NVarChar(Max)
+  Description String @db.NVarChar(Max)
+  Estatus String @db.NVarChar(Max)
 }
